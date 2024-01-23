@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="grid grid-cols-12 gap-10 mt-10">
+      <div class="logo col-span-2">
+        <img src="assets/Logo.png" alt="" class="w-10 ml-3" />
+      </div>
+
+      <div class="mt-28 col-span-6 flex flex-col">
+        <textarea
+          class="textarea-box"
+          id="inputText"
+          cols="30"
+          rows="10"
+          placeholder="Digite seu texto"
+        ></textarea>
+        <div class="flex justify-between">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined"> info </span>
+            <p>Apenas letras minúsculas e sem acento.</p>
+          </div>
+          <button class="mr-10 eraseFirst" onclick="eraseFirst()">Apagar</button>
+        </div>
+
+        <div class="flex justify-center gap-10 mt-5">
+          <button class="button" onclick="encrypt()">Criptografar</button>
+          <button class="button" onclick="decrypt()">Descriptografar</button>
+        </div>
+      </div>
+      <aside
+        class="col-span-4 flex-col justify-center bg-white mx-6 rounded-3xl shadow-xl"
+        id="noTextDiv"
+      >
+        <div class="flex flex-col items-center justify-center text-center">
+          <img src="assets/No_Message.png" class="w-80" alt="" />
+          <div>
+            <h3>Nenhuma mensagem encontrada</h3>
+            <p>
+              Digite um texto que você deseja criptografar ou descriptografar.
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      <aside
+        class="col-span-4 flex-col justify-between items-center bg-white mx-6 rounded-3xl shadow-xl p-10"
+        id="withTextDiv"
+      >
+        <div class="flex justify-start flex-col items-center">
+          <textarea name="" rows="10" id="resultText" readonly></textarea>
+        </div>
+
+        <p id="copyMessage"></p>
+        <div class="buttons">
+          <button type="submit" id="buttonCopy" onclick="copy()">Copiar</button>
+          <button type="submit" class="erase" onclick="erase()">Deletar</button>
+        </div>
+      </aside>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>

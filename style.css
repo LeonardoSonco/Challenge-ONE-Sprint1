@@ -1,0 +1,100 @@
+body {
+  background-color: rgba(243, 245, 252, 1);
+}
+
+.logo {
+  text-align: -webkit-center;
+}
+
+.button {
+  background: rgba(216, 223, 232, 1);
+  width: 332px;
+  border-radius: 24px;
+  padding: 20px 0px;
+  color: rgba(10, 56, 113, 1);
+  border: 1px solid rgba(10, 56, 113, 1);
+}
+
+.button:first-child {
+  background: rgba(10, 56, 113, 1);
+  color: white;
+}
+
+.textarea-box {
+  background-color: rgba(243, 245, 252, 1);
+  border-color: rgba(243, 245, 252, 1);
+  padding: 10px;
+  font-size: 32px;
+  font-weight: 400;
+  color: rgba(10, 56, 113, 1);
+  max-height: 450px;
+}
+
+.textarea-box:focus,
+#resultText:focus {
+  outline: 0;
+}
+
+.textarea-box::placeholder {
+  color: rgba(10, 56, 113, 1);
+}
+
+.erase,
+.eraseFirst {
+  background: rgba(216, 223, 232, 1);
+  border-radius: 24px;
+  padding: 20px 20px;
+  color: rgba(10, 56, 113, 1);
+  border: 1px solid rgba(10, 56, 113, 1);
+  transition: transform 0.1s ease-in-out;
+}
+
+.eraseFirst {
+  padding: 5px 10px;
+}
+
+#noTextDiv {
+  display: flex;
+  height: 105%;
+}
+
+#withTextDiv {
+  display: none;
+  height: 105%;
+}
+
+#resultText {
+  display: none;
+  font-size: 24px;
+  color: rgba(73, 80, 87, 1);
+  text-align: center;
+  width: 80%;
+}
+
+#buttonCopy {
+  display: block;
+  width: 100%;
+  justify-content: center;
+  background: rgba(216, 223, 232, 1);
+  border-radius: 24px;
+  padding: 20px 0px;
+  color: rgba(10, 56, 113, 1);
+  border: 1px solid rgba(10, 56, 113, 1);
+  transition: transform 0.1s ease-in-out;
+}
+
+#buttonCopy:active,
+.erase:active {
+  transform: scale(0.95); /* Valor menor para criar o efeito de afundamento */
+}
+
+#copyMessage {
+  top: 75px;
+  position: relative;
+}
+
+.buttons {
+  display: flex;
+  width: -webkit-fill-available;
+  gap: 15px;
+}
